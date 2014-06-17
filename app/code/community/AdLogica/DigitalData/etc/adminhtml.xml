@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <adlogica_digitaldata translate="title" module="digital_data_main">
+                                        <sort_order>0</sort_order>
+                                        <title>Manage AdLogica Script</title>
+                                    </adlogica_digitaldata>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
+

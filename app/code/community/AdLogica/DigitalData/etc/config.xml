@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+  <config>
+    <modules>
+      <AdLogica_DigitalData>
+        <version>0.0.1</version>
+      </AdLogica_DigitalData>
+    </modules>
+
+    <global>
+      <models>
+          <digital_data_main>
+            <class>AdLogica_DigitalData_Model</class>
+          </digital_data_main>
+      </models>
+      <helpers>
+        <digital_data_main>
+          <class>AdLogica_DigitalData_Helper</class>
+        </digital_data_main>
+      </helpers>
+      <blocks>
+          <digital_data_main>
+            <class>AdLogica_DigitalData_Block</class>
+          </digital_data_main>
+      </blocks>
+    </global>
+
+    <frontend>
+      <!-- Layout -->
+      <routers>
+            <!-- This node's name should be the same as our alias -->
+            <digitaldata>
+                <!-- use parameter specifies which of basic routers needs to be used.
+                This can be "standard" for frontend or "admin" for backend -->
+                <use>standard</use>
+                <!-- router arguments block -->
+                <args>
+                    <!-- This parameter specifies the full name of out module -->
+                    <module>AdLogica_DigitalData</module>
+                    <!-- This parameter sets module alias -->
+                    <frontName>digitaldata</frontName>
+                </args>
+            </digitaldata>
+      </routers>
+      <layout>
+        <updates>
+          <adlogica_digital_data>
+            <file>adlogica/digital_data.xml</file>
+          </adlogica_digital_data>
+        </updates>
+      </layout>
+      <events>
+        <controller_action_layout_load_before>
+          <observers>
+            <AdLogica_DigitalData_Model_Page_Observer>
+              <type>singleton</type>
+              <class>digital_data_main/page_observer</class>
+              <method>setDigitalData</method>
+            </AdLogica_DigitalData_Model_Page_Observer>
+          </observers>
+        </controller_action_layout_load_before>
+      </events>
+    </frontend>
+
+    <!-- Admin Configuration Default Values -->
+    <default>
+      <adlogica>
+        <adlogica_digital_data_enabled>1</adlogica_digital_data_enabled>
+      </adlogica>
+    </default>
+</config>
+

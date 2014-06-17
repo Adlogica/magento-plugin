@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+        <AdLogica_tab translate="label">
+            <label>Digital Data</label>
+            <sort_order>200</sort_order>
+        </AdLogica_tab>
+    </tabs>
+
+    <sections>
+        <adlogica_digitaldata translate="label">
+            <label>Configuration</label>
+            <tab>AdLogica_tab</tab>
+            <frontend_type>text</frontend_type> 
+            <sort_order>2</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <AdLogica_DigitalData_Settings translate="label">
+                    <label>Digital Data Configuration</label>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <AdLogica_DigitalData_Enabled translate="label">
+                            <label>Enable Digital Data</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <config_path>adlogica/adlogica_digital_data_enabled</config_path>    
+                            <comment><![CDATA[ Variables output on every page are based on Digital Data Specification ]]></comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </AdLogica_DigitalData_Enabled>
+                    </fields>
+                </AdLogica_DigitalData_Settings>
+            </groups>
+        </adlogica_digitaldata>
+    </sections>
+</config>
+

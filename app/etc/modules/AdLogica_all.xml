@@ -1,0 +1,9 @@
+<?xml version = "1.0"?>
+<config>
+  <modules>
+    <AdLogica_DigitalData>
+        <active>true</active>
+        <codePool>community</codePool>
+     </AdLogica_DigitalData>
+   </modules>
+</config>

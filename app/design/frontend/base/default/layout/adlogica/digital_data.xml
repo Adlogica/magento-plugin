@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+      <reference name="head">
+        <block type="digital_data_main/digdata" name="digital_data" as="digital_data" template="adlogica/digital_data.phtml"/>
+      </reference>
+    </default>
+</layout>
