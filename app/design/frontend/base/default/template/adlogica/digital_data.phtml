@@ -1,6 +1,7 @@
 <?php
   $adlogica_digital_data_enabled         = Mage::getStoreConfig('adlogica/adlogica_digital_data_enabled');
-
+  $adlogica_organization_id = Mage::getStoreConfig('adlogica/adlogica_organization_id');
+  $adlogica_application_id = Mage::getStoreConfig('adlogica/adlogica_application_id');
   $observer = 'digital_data_main/page_observer';
   $mage = Mage::getSingleton($observer);
 
@@ -25,7 +26,8 @@
   window.digitalData.version         = <?php echo json_encode($version); ?>;
   window.digitalData.magento_version = <?php echo json_encode($magento_version) ?>;
   window.digitalData.page            = <?php echo json_encode($page); ?>;
-  window.digitalData.user            = <?php echo json_encode($user); ?>;
+  window.digitalData.user = [];
+  window.digitalData.user[0]            = <?php echo json_encode($user); ?>;
   <?php if ($product) : ?>
   window.digitalData.product = [];
   window.digitalData.product[0]         = <?php echo json_encode($product) ?>;
@@ -45,3 +47,6 @@
 <!-- Digital Data End -->
 <?php endif;?>
 
+<?php if ($adlogica_organization_id != "" && $adlogica_application_id !="") :?>
+  <script type="text/javascript" src="http://d1hmvgyttpradw.cloudfront.net/<?php echo $adlogica_organization_id; ?>/<?php echo $adlogica_application_id; ?>/adlogica_tracker.js"></script>
+<?php endif;?>

@@ -2,7 +2,7 @@
 <config>
 	<tabs>
         <AdLogica_tab translate="label">
-            <label>Digital Data</label>
+            <label>SavvyAds</label>
             <sort_order>200</sort_order>
         </AdLogica_tab>
     </tabs>
@@ -18,7 +18,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <AdLogica_DigitalData_Settings translate="label">
-                    <label>Digital Data Configuration</label>
+                    <label>SavvyAds Configuration</label>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
@@ -29,12 +29,33 @@
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <config_path>adlogica/adlogica_digital_data_enabled</config_path>    
-                            <comment><![CDATA[ Variables output on every page are based on Digital Data Specification ]]></comment>
+                            <comment><![CDATA[ Enables global variable digitalData ]]></comment>
                             <sort_order>1</sort_order>
                             <show_in_default>1</show_in_default>
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </AdLogica_DigitalData_Enabled>
+                        <AdLogica_Organization_ID translate="label">
+                            <label>Organization ID</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>adlogica/adlogica_organization_id</config_path>    
+                            <comment><![CDATA[ Your Organization ID ]]></comment>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </AdLogica_Organization_ID>
+                        <AdLogica_Application_ID translate="label">
+                            <label>Application ID</label>
+                            <frontend_type>text</frontend_type>
+                            <config_path>adlogica/adlogica_application_id</config_path>    
+                            <comment><![CDATA[ Your Application ID ]]></comment>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </AdLogica_Application_ID>
+                        
                     </fields>
                 </AdLogica_DigitalData_Settings>
             </groups>
